@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/containerlkh"
+    android:layout_height="match_parent">
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/refreshLkh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:id="@+id/toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dua"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <RelativeLayout
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/satu"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/satu">
+
+                <EditText
+                    android:id="@+id/search_lkh"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/tiga"
+                    android:drawableStart="@drawable/ic_search"
+                    android:hint="@string/search"
+                    android:paddingVertical="@dimen/satu"
+                    android:drawablePadding="@dimen/satu"
+                    android:paddingStart="@dimen/dua"
+                    android:background="@drawable/toolbar"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppins"
+                    android:textSize="@dimen/two"
+                    android:layout_toStartOf="@id/filter_lkh"
+                    android:autofillHints=""
+                    android:inputType="text"
+                    tools:ignore="RtlSymmetry" />
+
+                <ImageButton
+                    android:id="@+id/filter_lkh"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/toolbar"
+                    android:src="@drawable/ic_filter"
+                    android:layout_alignParentEnd="true"
+                    android:contentDescription="@null"
+                    tools:ignore="RtlSymmetry" />
+
+            </RelativeLayout>
+
+            <ExpandableListView
+                android:id="@+id/list_view"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginVertical="@dimen/dua"
+                android:scrollbars="none"
+                android:indicatorLeft="@dimen/tiga"
+                android:divider="@null"
+                android:layout_below="@id/toolbar">
+            </ExpandableListView>
+        </RelativeLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+<!--     empty state -->
+        <include
+            android:id="@+id/es_layout_lkh"
+            android:visibility="visible"
+            layout="@layout/empty_state_lkh"/>
+
+</RelativeLayout>

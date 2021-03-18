@@ -1,0 +1,665 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment.Navbar.FragmentHome">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarHome"
+        app:title="@string/home"
+        app:titleTextAppearance="@style/Toolbar.Title"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:menu="@menu/home_toolbar"/>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/refreshHome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbarHome">
+
+        <ScrollView
+            android:id="@+id/scroll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/lima"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:clipToPadding="false"
+                android:padding="@dimen/margin">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/tiga">
+
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_today"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:contentDescription="@null" />
+
+                    <TextView
+                        android:id="@+id/title_today"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="@string/title_today"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/twoHalf"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/imageView2"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        card_view:cardElevation="@null"
+                        card_view:cardBackgroundColor="#FF4062"
+                        card_view:cardCornerRadius="@dimen/tiga"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/dua"
+                            android:padding="@dimen/satu">
+
+                            <TextView
+                                android:id="@+id/title_target_today"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/satu"
+                                android:textColor="@color/white"
+                                android:fontFamily="@font/poppins"
+                                android:text="@string/target"
+                                android:textSize="@dimen/two" />
+
+                            <TextView
+                                android:id="@+id/target_today"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/white"
+                                android:fontFamily="@font/poppins_semibold"
+                                android:text="300"
+                                android:textSize="@dimen/two" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView_terverif_today"
+                    android:layout_width="match_parent"
+                    android:clickable="true"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dua"
+                    card_view:cardElevation="@null"
+                    card_view:cardBackgroundColor="#EDFAEE"
+                    card_view:cardCornerRadius="@dimen/dua"
+                    android:focusable="true">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ic_terverifikasi"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:padding="@dimen/satu"
+                            android:tint="@color/green"
+                            android:src="@drawable/ic_check"
+                            android:layout_marginVertical="@dimen/tiga"
+                            android:layout_marginHorizontal="@dimen/dua"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/title_terverifikasi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dua"
+                            android:layout_marginTop="@dimen/dua"
+                            android:fontFamily="@font/poppins"
+                            android:text="Terverifikasi"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/two"
+                            app:layout_constraintStart_toEndOf="@+id/ic_terverifikasi"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dua"
+                            android:layout_marginBottom="@dimen/dua"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:text="8"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/two"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/ic_terverifikasi" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/presentase"
+                            android:layout_width="@dimen/tujuh"
+                            android:layout_height="@dimen/tujuh"
+                            android:src="@drawable/ic_presentase_green"
+                            android:layout_margin="@dimen/dua"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/textpresentase"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:text="75%"
+                            android:textColor="@color/green"
+                            android:textSize="@dimen/oneHalf"
+                            app:layout_constraintBottom_toBottomOf="@+id/presentase"
+                            app:layout_constraintEnd_toEndOf="@+id/presentase"
+                            app:layout_constraintStart_toStartOf="@+id/presentase"
+                            app:layout_constraintTop_toTopOf="@+id/presentase" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView_unverif_today"
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dua"
+                    card_view:cardElevation="@null"
+                    card_view:cardBackgroundColor="#FFFAEC"
+                    card_view:cardCornerRadius="@dimen/dua">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ic_blm_verif"
+                            android:layout_width="@dimen/enam"
+                            android:layout_height="@dimen/enam"
+                            android:padding="@dimen/satu"
+                            android:layout_marginVertical="@dimen/tiga"
+                            android:layout_marginHorizontal="@dimen/dua"
+                            android:tint="@color/orange"
+                            android:src="@drawable/ic_clock_finish"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/title_blm_verif"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dua"
+                            android:layout_marginTop="@dimen/dua"
+                            android:fontFamily="@font/poppins"
+                            android:text="Belum Terverifikasi"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/two"
+                            app:layout_constraintStart_toEndOf="@+id/ic_blm_verif"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dua"
+                            android:layout_marginBottom="@dimen/dua"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:text="10"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/two"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/ic_blm_verif" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/presentase_notverif"
+                            android:layout_width="@dimen/tujuh"
+                            android:layout_height="@dimen/tujuh"
+                            android:src="@drawable/ic_presentase_not_verif"
+                            android:layout_margin="@dimen/dua"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/textpresentase_notverif"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:text="75%"
+                            android:textColor="@color/orange"
+                            android:textSize="@dimen/oneHalf"
+                            app:layout_constraintBottom_toBottomOf="@+id/presentase_notverif"
+                            app:layout_constraintEnd_toEndOf="@+id/presentase_notverif"
+                            app:layout_constraintStart_toStartOf="@+id/presentase_notverif"
+                            app:layout_constraintTop_toTopOf="@+id/presentase_notverif" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/delapan"
+                    card_view:cardElevation="@null"
+                    card_view:cardBackgroundColor="#E8E9FF"
+                    card_view:cardCornerRadius="@dimen/dua">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ic_total_today"
+                            android:layout_width="@dimen/enam"
+                            android:layout_height="@dimen/enam"
+                            android:padding="@dimen/satu"
+                            android:tint="@color/blue"
+                            android:layout_marginVertical="@dimen/tiga"
+                            android:layout_marginHorizontal="@dimen/dua"
+                            android:src="@drawable/ic_poin_total"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/title_total_today"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dua"
+                            android:layout_marginTop="@dimen/dua"
+                            android:fontFamily="@font/poppins"
+                            android:text="Total Poin"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/two"
+                            app:layout_constraintStart_toEndOf="@+id/ic_total_today"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dua"
+                            android:layout_marginBottom="@dimen/dua"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:text="150"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/two"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/ic_total_today" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/presentase_totaltoday"
+                            android:layout_width="@dimen/tujuh"
+                            android:layout_height="@dimen/tujuh"
+                            android:src="@drawable/ic_presentase_total_today"
+                            android:layout_margin="@dimen/dua"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/textpresentase_totaltoday"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:text="75%"
+                            android:textColor="@color/blue"
+                            android:textSize="@dimen/oneHalf"
+                            app:layout_constraintBottom_toBottomOf="@+id/presentase_totaltoday"
+                            app:layout_constraintEnd_toEndOf="@+id/presentase_totaltoday"
+                            app:layout_constraintStart_toStartOf="@+id/presentase_totaltoday"
+                            app:layout_constraintTop_toTopOf="@+id/presentase_totaltoday" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/tiga">
+
+                    <ImageView
+                        android:id="@+id/month_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_month"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:contentDescription="@null" />
+
+                    <TextView
+                        android:id="@+id/title_month"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/satu"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="@string/title_month"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/twoHalf"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/month_img"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        card_view:cardElevation="@null"
+                        card_view:cardBackgroundColor="@color/red"
+                        card_view:cardCornerRadius="@dimen/tiga"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/dua"
+                            android:padding="@dimen/satu">
+
+                            <TextView
+                                android:id="@+id/title_target_month"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/satu"
+                                android:textColor="@color/white"
+                                android:fontFamily="@font/poppins"
+                                android:text="Target"
+                                android:textSize="@dimen/two" />
+
+                            <TextView
+                                android:id="@+id/target_month"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/white"
+                                android:fontFamily="@font/poppins_semibold"
+                                android:text="2300"
+                                android:textSize="@dimen/two" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView_terverif_month"
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center"
+                    card_view:cardElevation="@null"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dua"
+                    card_view:cardBackgroundColor="#EDFAEE"
+                    card_view:cardCornerRadius="@dimen/dua">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ic_terverifikasi_month"
+                            android:layout_width="@dimen/enam"
+                            android:layout_height="@dimen/enam"
+                            android:padding="@dimen/satu"
+                            android:tint="@color/green"
+                            android:src="@drawable/ic_check"
+                            android:layout_marginVertical="@dimen/tiga"
+                            android:layout_marginHorizontal="@dimen/dua"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/title_terverifikasi_month"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dua"
+                            android:layout_marginTop="@dimen/dua"
+                            android:fontFamily="@font/poppins"
+                            android:text="Terverifikasi"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/two"
+                            app:layout_constraintStart_toEndOf="@+id/ic_terverifikasi_month"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/textContent_month"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dua"
+                            android:layout_marginBottom="@dimen/dua"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:text="65"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/two"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/ic_terverifikasi_month" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/presentase_month"
+                            android:layout_width="@dimen/tujuh"
+                            android:layout_height="@dimen/tujuh"
+                            android:src="@drawable/ic_presentase_green"
+                            android:layout_margin="@dimen/dua"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/textpresentase_month"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:text="75%"
+                            android:textColor="@color/green"
+                            android:textSize="@dimen/oneHalf"
+                            app:layout_constraintBottom_toBottomOf="@+id/presentase_month"
+                            app:layout_constraintEnd_toEndOf="@+id/presentase_month"
+                            app:layout_constraintStart_toStartOf="@+id/presentase_month"
+                            app:layout_constraintTop_toTopOf="@+id/presentase_month" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView_unverif_month"
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    card_view:cardElevation="@null"
+                    android:layout_marginBottom="@dimen/dua"
+                    card_view:cardBackgroundColor="#FFFAEC"
+                    card_view:cardCornerRadius="@dimen/dua">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ic_blm_verif_month"
+                            android:layout_width="@dimen/enam"
+                            android:layout_height="@dimen/enam"
+                            android:padding="@dimen/satu"
+                            android:layout_marginVertical="@dimen/tiga"
+                            android:layout_marginHorizontal="@dimen/dua"
+                            android:tint="@color/orange"
+                            android:src="@drawable/ic_clock_finish"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/title_blm_verif_month"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dua"
+                            android:layout_marginTop="@dimen/dua"
+                            android:fontFamily="@font/poppins"
+                            android:text="Belum Terverifikasi"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/two"
+                            app:layout_constraintStart_toEndOf="@+id/ic_blm_verif_month"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dua"
+                            android:layout_marginBottom="@dimen/dua"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:text="10"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/two"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/ic_blm_verif_month" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/presentase_notverif_month"
+                            android:layout_width="@dimen/tujuh"
+                            android:layout_height="@dimen/tujuh"
+                            android:src="@drawable/ic_presentase_not_verif"
+                            android:layout_margin="@dimen/dua"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/textpresentase_notverif_month"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:text="75%"
+                            android:textColor="@color/orange"
+                            android:textSize="@dimen/oneHalf"
+                            app:layout_constraintBottom_toBottomOf="@+id/presentase_notverif_month"
+                            app:layout_constraintEnd_toEndOf="@+id/presentase_notverif_month"
+                            app:layout_constraintStart_toStartOf="@+id/presentase_notverif_month"
+                            app:layout_constraintTop_toTopOf="@+id/presentase_notverif_month" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/tujuh"
+                    card_view:cardElevation="@null"
+                    card_view:cardBackgroundColor="#E8E9FF"
+                    card_view:cardCornerRadius="@dimen/dua">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ic_total_month"
+                            android:layout_width="@dimen/enam"
+                            android:layout_height="@dimen/enam"
+                            android:padding="@dimen/satu"
+                            android:tint="@color/blue"
+                            android:layout_marginVertical="@dimen/tiga"
+                            android:layout_marginHorizontal="@dimen/dua"
+                            android:src="@drawable/ic_poin_total"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/title_total_month"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dua"
+                            android:layout_marginTop="@dimen/dua"
+                            android:fontFamily="@font/poppins"
+                            android:text="Total Poin"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/two"
+                            app:layout_constraintStart_toEndOf="@+id/ic_total_month"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dua"
+                            android:layout_marginBottom="@dimen/dua"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:text="2120"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/two"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/ic_total_month" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/presentase_totalmonth"
+                            android:layout_width="@dimen/tujuh"
+                            android:layout_height="@dimen/tujuh"
+                            android:src="@drawable/ic_presentase_total_today"
+                            android:layout_margin="@dimen/dua"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/textpresentase_totalmonth"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:text="75%"
+                            android:textColor="@color/blue"
+                            android:textSize="@dimen/oneHalf"
+                            app:layout_constraintBottom_toBottomOf="@+id/presentase_totalmonth"
+                            app:layout_constraintEnd_toEndOf="@+id/presentase_totalmonth"
+                            app:layout_constraintStart_toStartOf="@+id/presentase_totalmonth"
+                            app:layout_constraintTop_toTopOf="@+id/presentase_totalmonth" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <!--                <include layout="@layout/activity_layout_terverifikasi_today"-->
+                <!--                    tools:visibility = "gone"/>-->
+
+            </LinearLayout>
+
+
+        </ScrollView>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+</RelativeLayout>

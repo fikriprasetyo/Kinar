@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/more_edit"
+        android:title="@string/editProfileTitle"
+        app:showAsAction="collapseActionView"/>
+    <item
+        android:id="@+id/more_changepass"
+        android:title="@string/title_ganti_pass"
+        app:showAsAction="collapseActionView"/>
+    <item
+        android:id="@+id/more_about"
+        android:title="@string/title_about"
+        app:showAsAction="collapseActionView"/>
+    <item
+        android:id="@+id/more_Logout"
+        android:title="@string/title_logout"
+        app:showAsAction="collapseActionView"/>
+
+</menu>

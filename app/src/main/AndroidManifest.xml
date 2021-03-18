@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="jepara.app.kinar">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <compatible-screens>
+        <!-- all small size screens -->
+        <screen android:screenSize="small" android:screenDensity="ldpi" />
+        <screen android:screenSize="small" android:screenDensity="mdpi" />
+        <screen android:screenSize="small" android:screenDensity="hdpi" />
+        <screen android:screenSize="small" android:screenDensity="xhdpi" />
+        <screen android:screenSize="small" android:screenDensity="xxhdpi" />
+        <screen android:screenSize="small" android:screenDensity="xxxhdpi" />
+        <!-- all normal size screens -->
+        <screen android:screenSize="normal" android:screenDensity="ldpi" />
+        <screen android:screenSize="normal" android:screenDensity="mdpi" />
+        <screen android:screenSize="normal" android:screenDensity="hdpi" />
+        <screen android:screenSize="normal" android:screenDensity="xhdpi" />
+        <screen android:screenSize="normal" android:screenDensity="xxhdpi" />
+        <screen android:screenSize="normal" android:screenDensity="xxxhdpi" />
+    </compatible-screens>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Kinar">
+        <activity android:name=".view.LayoutUnverifToday"></activity>
+        <activity android:name=".view.LayoutUnverifMonth" />
+        <activity android:name=".view.LayoutTerverifToday" />
+        <activity android:name=".view.LayoutTerverifMonth" />
+        <activity android:name=".view.About" />
+        <activity android:name=".view.ChangePassword" />
+        <activity android:name=".view.EditProfil" />
+        <activity android:name=".view.EditLkh" />
+        <activity android:name=".view.ForgetPassword" />
+        <activity android:name=".view.Login" />
+        <activity android:name=".view.Onboarding" />
+        <activity android:name=".view.SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Fragment.Navbar.TambahLkh" />
+        <activity android:name=".view.MainActivity" />
+    </application>
+
+</manifest>

@@ -1,0 +1,595 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragment.Navbar.FragmentProfil">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarProfil"
+        app:title="Profil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:menu="@menu/profil_toolbar"
+        app:titleTextAppearance="@style/Toolbar.Title"
+        app:popupTheme="@style/MenuStyle"/>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/refreshProfil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/lima"
+        android:layout_below="@id/toolbarProfil">
+
+        <ScrollView
+            android:id="@+id/scroll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/toolbarProfil"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/margin">
+
+                <!--            Profil-->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/empat">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:src="@drawable/photo_profil"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textNama"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dua"
+                        android:text="Gemilang Kharisma S."
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/poppins_bold"
+                        android:background="@null"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/satu"
+                    card_view:cardElevation="0dp"
+                    card_view:cardBackgroundColor="#F6F6FF"
+                    card_view:cardCornerRadius="@dimen/dua">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ic_email"
+                            android:layout_width="@dimen/tiga"
+                            android:layout_height="@dimen/tiga"
+                            android:padding="4dp"
+                            android:tint="@color/secondary"
+                            android:layout_marginVertical="@dimen/dua"
+                            android:layout_marginStart="@dimen/dua"
+                            android:src="@drawable/ic_at"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/title_email"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dua"
+                            android:fontFamily="@font/poppins_bold"
+                            android:text="@string/email"
+                            android:textColor="@color/secondary"
+                            android:textSize="@dimen/dua"
+                            app:layout_constraintStart_toEndOf="@+id/ic_email"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/text_email"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dua"
+                            android:layout_marginTop="@dimen/satu"
+                            android:layout_marginBottom="@dimen/dua"
+                            android:autoSizeTextType="uniform"
+                            android:background="@null"
+                            android:fontFamily="@font/poppins"
+                            android:text="gkharismasetyobudi@gmail.com"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/oneHalfHalf"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/title_email" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/satu"
+                    card_view:cardElevation="@null"
+                    card_view:cardBackgroundColor="#F6F6FF"
+                    card_view:cardCornerRadius="@dimen/dua">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ic_telepon"
+                            android:layout_width="@dimen/tiga"
+                            android:layout_height="@dimen/tiga"
+                            android:layout_marginVertical="@dimen/dua"
+                            android:layout_marginStart="@dimen/dua"
+                            android:padding="4dp"
+                            android:tint="@color/secondary"
+                            android:src="@drawable/ic_telp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/title_telepon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dua"
+                            android:fontFamily="@font/poppins_bold"
+                            android:text="@string/title_telepon"
+                            android:textColor="@color/secondary"
+                            android:textSize="@dimen/two"
+                            app:layout_constraintStart_toEndOf="@+id/ic_telepon"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/text_telepon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dua"
+                            android:layout_marginTop="@dimen/satu"
+                            android:layout_marginBottom="@dimen/dua"
+                            android:background="@null"
+                            android:fontFamily="@font/poppins"
+                            android:text="+6285220548109"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/oneHalfHalf"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/title_telepon" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/enam"
+                    card_view:cardElevation="@null"
+                    card_view:cardBackgroundColor="#F6F6FF"
+                    card_view:cardCornerRadius="@dimen/dua">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ic_alamat"
+                            android:layout_width="@dimen/tiga"
+                            android:layout_height="@dimen/tiga"
+                            android:layout_marginVertical="@dimen/dua"
+                            android:layout_marginLeft="@dimen/dua"
+                            android:tint="@color/secondary"
+                            android:padding="4dp"
+                            android:src="@drawable/ic_location"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/title_alamat"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dua"
+                            android:fontFamily="@font/poppins_bold"
+                            android:text="Alamat"
+                            android:textColor="@color/secondary"
+                            android:textSize="@dimen/dua"
+                            app:layout_constraintStart_toEndOf="@+id/ic_alamat"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/text_alamat"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dua"
+                            android:layout_marginTop="@dimen/satu"
+                            android:layout_marginBottom="@dimen/dua"
+                            android:background="@null"
+                            android:fontFamily="@font/poppins"
+                            android:text="Jl. Mana aja No. 117 Jepara"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/oneHalfHalf"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/title_alamat" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/title_month"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Aktifitas"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/twoHalf"
+                    android:layout_marginBottom="@dimen/dua"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/ic_share"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="32dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/ic_likes"
+                        card_view:cardBackgroundColor="#FFF7E3"
+                        card_view:cardCornerRadius="@dimen/dua"
+                        card_view:cardElevation="@null">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="wrap_content"
+                            android:padding="@dimen/dua"
+                            android:layout_height="wrap_content">
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/appCompatImageView"
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"
+                                android:padding="@dimen/satu"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                card_view:cardBackgroundColor="#FEC840"
+                                card_view:cardCornerRadius="@dimen/satu"
+                                card_view:cardElevation="0dp">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:padding="@dimen/satu"
+                                    android:src="@drawable/ic_share"
+                                    app:tint="@color/white" />
+
+                            </androidx.cardview.widget.CardView>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/appCompatImageView"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <TextView
+                                    android:id="@+id/title_terverifikasi_month"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="8dp"
+                                    android:background="@null"
+                                    android:fontFamily="@font/poppins"
+                                    android:text="Shares"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/oneHalfHalf"
+                                    app:layout_constraintStart_toEndOf="@+id/ic_share"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <TextView
+                                    android:id="@+id/content_terverifikasi_month"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="8dp"
+                                    android:background="@null"
+                                    android:fontFamily="@font/poppins_semibold"
+                                    android:text="125"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/oneHalfHalf"
+                                    app:layout_constraintStart_toEndOf="@+id/ic_share"
+                                    app:layout_constraintTop_toBottomOf="@+id/title_terverifikasi_month" />
+
+                            </LinearLayout>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/ic_likes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_gravity="center"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        card_view:cardBackgroundColor="#FFE3E8"
+                        card_view:cardCornerRadius="@dimen/dua"
+                        card_view:cardElevation="0dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="wrap_content"
+                            android:padding="@dimen/dua"
+                            android:layout_height="wrap_content">
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/like_ImageView"
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"
+                                android:padding="@dimen/satu"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                card_view:cardBackgroundColor="#FF4062"
+                                card_view:cardCornerRadius="@dimen/satu"
+                                card_view:cardElevation="0dp">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:padding="@dimen/satu"
+                                    android:src="@drawable/ic_like"
+                                    app:tint="@color/white" />
+
+                            </androidx.cardview.widget.CardView>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/like_ImageView"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <TextView
+                                    android:id="@+id/title_likes_month"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="8dp"
+                                    android:background="@null"
+                                    android:fontFamily="@font/poppins"
+                                    android:text="Likes"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/oneHalfHalf"
+                                    app:layout_constraintStart_toEndOf="@+id/ic_share"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <TextView
+                                    android:id="@+id/content_likes_month"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="8dp"
+                                    android:background="@null"
+                                    android:fontFamily="@font/poppins_semibold"
+                                    android:text="40"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/oneHalfHalf"
+                                    app:layout_constraintStart_toEndOf="@+id/ic_share"
+                                    app:layout_constraintTop_toBottomOf="@+id/title_terverifikasi_month" />
+
+                            </LinearLayout>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/ic_post"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/ic_share"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="32dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/ic_follower"
+                        card_view:cardBackgroundColor="#EDFAEE"
+                        card_view:cardCornerRadius="@dimen/dua"
+                        card_view:cardElevation="0dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="wrap_content"
+                            android:padding="@dimen/dua"
+                            android:layout_height="wrap_content">
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/post_ImageView"
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"
+                                android:padding="@dimen/satu"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                card_view:cardBackgroundColor="@color/green"
+                                card_view:cardCornerRadius="@dimen/satu"
+                                card_view:cardElevation="0dp">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:padding="@dimen/satu"
+                                    android:src="@drawable/ic_ekinerja"
+                                    app:tint="@color/white" />
+
+                            </androidx.cardview.widget.CardView>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/post_ImageView"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <TextView
+                                    android:id="@+id/title_post_month"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="8dp"
+                                    android:background="@null"
+                                    android:fontFamily="@font/poppins"
+                                    android:text="Post"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/oneHalfHalf"
+                                    app:layout_constraintStart_toEndOf="@+id/ic_share"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <TextView
+                                    android:id="@+id/content_post_month"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="8dp"
+                                    android:background="@null"
+                                    android:fontFamily="@font/poppins_semibold"
+                                    android:text="37"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/oneHalfHalf"
+                                    app:layout_constraintStart_toEndOf="@+id/ic_share"
+                                    app:layout_constraintTop_toBottomOf="@+id/title_terverifikasi_month" />
+
+                            </LinearLayout>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/ic_follower"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/ic_share"
+                        android:layout_alignParentEnd="true"
+                        android:layout_gravity="center"
+
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        card_view:cardBackgroundColor="#E8E9FF"
+                        card_view:cardCornerRadius="@dimen/dua"
+                        card_view:cardElevation="0dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="wrap_content"
+                            android:padding="@dimen/dua"
+                            android:layout_height="wrap_content">
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/follower_ImageView"
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"
+                                android:padding="@dimen/satu"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                card_view:cardBackgroundColor="@color/blue"
+                                card_view:cardCornerRadius="@dimen/satu"
+                                card_view:cardElevation="0dp">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:padding="@dimen/satu"
+                                    android:src="@drawable/ic_follower"
+                                    app:tint="@color/white" />
+
+                            </androidx.cardview.widget.CardView>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/follower_ImageView"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <TextView
+                                    android:id="@+id/title_follower_month"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="8dp"
+                                    android:background="@null"
+                                    android:fontFamily="@font/poppins"
+                                    android:text="Followers"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/oneHalfHalf"
+                                    app:layout_constraintStart_toEndOf="@+id/ic_share"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <TextView
+                                    android:id="@+id/content_follower_month"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="8dp"
+                                    android:background="@null"
+                                    android:fontFamily="@font/poppins_semibold"
+                                    android:text="48"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/oneHalfHalf"
+                                    app:layout_constraintStart_toEndOf="@+id/ic_share"
+                                    app:layout_constraintTop_toBottomOf="@+id/title_terverifikasi_month" />
+
+                            </LinearLayout>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+
+</RelativeLayout>

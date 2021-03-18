@@ -1,0 +1,80 @@
+<resources>
+    <string name="app_name">Kinar</string>
+
+    <!--    Title-->
+    <string name="aboutTitle">Tentang Kinar</string>
+    <string name="title_onboarding1">Hadir di genggamanmu</string>
+    <string name="title_onboarding2">Jauh lebih mudah</string>
+    <string name="title_onboarding3">Efisiensi Waktu Anda</string>
+    <string name="loginTitle">Login Kinar</string>
+    <string name="title_forgetpass">Reset Password</string>
+    <string name="nip">NIP/Username</string>
+    <string name="pass">Password</string>
+    <string name="email">Email</string>
+    <string name="forget_pass">Lupa Password ?</string>
+    <string name="search">Search</string>
+    <string name="notif">Notifikasi</string>
+    <string name="home">Home</string>
+    <string name="ekinerja">E-Kinerja</string>
+    <string name="profil">Profil</string>
+    <string name="title_tambahlkh">Tambah LKH</string>
+    <string name="date">Tanggal</string>
+    <string name="waktu_mulai">Mulai</string>
+    <string name="waktu_selesai">Selesai</string>
+    <string name="aktifitas">Aktifitas</string>
+    <string name="tempat">Tempat</string>
+    <string name="keterangan">Keterangan</string>
+    <string name="title_filter">Filter</string>
+    <string name="title_logout">Log Out</string>
+    <string name="title_about">Tentang Kinar</string>
+    <string name="title_ganti_pass">Ganti Password</string>
+    <string name="editProfileTitle">Edit Profil</string>
+    <string name="title_es_layout_lkh">Belum ada LKH yang</string>
+    <string name="title_es_layout_verif">Belum ada LKH yang</string>
+    <string name="title_es_layout_tpp">Fitur TPP masih dalam</string>
+    <string name="titlestrong_es_layout_lkh">Tersimpan</string>
+    <string name="titlestrong_es_layout_verif">Terverifikasi</string>
+    <string name="titlestrong_es_layout_tpp">Pengembangan</string>
+    <string name="titlestrong_es_layout_unverif">Belum Terverifikasi</string>
+    <string name="title_chat">Chat</string>
+    <string name="title_pesan">Pesan</string>
+    <string name="hint_ketik_pesan">Ketik pesan</string>
+    <string name="title_changepass">Ganti Password</string>
+    <string name="title_month">Bulan ini</string>
+
+    <!--    Body-->
+    <string name="aboutBody">Kinar / Kinerja Aparatur adalah Aplikasi untuk menilai kinerja PNS di Kabupaten Jepara Sebagai syarat penerimaan TPP (Tunjangan Penghasilan Pegawai) bagi PNS.
+        Aplikasi Kinar saat ini sedang dalam proses pengembangan oleh Diskominfo kabupaten Jepara, sebagai Dinas pemegang tupoksi dalam pengembangan Aplikasi. Untuk saat ini belum ada pembatasan dalam inputan LKH dan masih ada beberapa menu yang belum berfungsi. Mohon maaf atas ketidaknyamanannya dalam menggunakan aplikasi ini.</string>
+    <string name="body_onboarding1">Sekarang anda dapat menggunakan aplikasi Kinar di smartphone anda dengan sekali tap</string>
+    <string name="body_onboarding2">Rasakan kemudahan dalam mendokumentasikan kegiatan anda di lingkup instansi</string>
+    <string name="body_onboarding3">Dengan device yang selalu di tangan anda, menjadikan pengisian LKH lebih cepat</string>
+    <string name="body_forgetpass">Link untuk me-Reset Password akan dikirimkan ke email yang anda masukkan di bawah ini</string>
+    <string name="desc_es_layout">Untuk tambah LKH anda, Tap icon Plus di bawah ini</string>
+
+
+    <!--    Button-->
+    <string name="start">Mulai</string>
+    <string name="skip">Lewati</string>
+    <string name="login">Masuk</string>
+    <string name="resetpass">Reset Sekarang</string>
+    <string name="tambahlkh">Tambahkan</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="btn_simpan">Simpan</string>
+    <string name="title_telepon">Telepon</string>
+    <string name="Tanggal">tanggal</string>
+
+    <string name="body_changepass">Setelah mengganti password, anda akan diminta untuk melakukan Login kembali</string>
+    <string name="namaLengkap">Nama Lengkap</string>
+    <string name="telepon">Telepon</string>
+    <string name="alamat">Alamat</string>
+    <string name="password_now">Password saat ini</string>
+    <string name="password_new">Password baru</string>
+    <string name="edit_lkh">Edit LKH</string>
+    <string name="save">Simpan</string>
+    <string name="title_today">Poin hari ini</string>
+    <string name="target">Target</string>
+
+
+</resources>

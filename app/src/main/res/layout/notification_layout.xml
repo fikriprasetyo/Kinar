@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/notif_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        card_view:cardCornerRadius="@dimen/dua"
+        card_view:cardElevation="@null"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="@dimen/satu"
+        card_view:cardBackgroundColor="@color/primary2"
+        card_view:cardUseCompatPadding="true">
+
+        <TextView
+            android:id="@+id/notif_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="05/02/2021"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            android:layout_marginEnd="@dimen/satu"
+            android:background="@null"
+            android:padding="@dimen/satu"
+            android:layout_gravity="end"/>
+
+        <RelativeLayout
+            android:id="@+id/notif_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/tiga"
+            android:orientation="vertical">
+
+            <!--            title-->
+            <TextView
+                android:id="@+id/notif_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:text="Terverifikasi"
+                android:textColor="@color/black"
+                android:fontFamily="@font/poppins_semibold" />
+
+            <!--            body-->
+            <TextView
+                android:id="@+id/notif_body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:layout_marginTop="@dimen/satu"
+                android:text="LKH anda Telah diverifikasi"
+                android:textColor="@color/black"
+                android:fontFamily="@font/poppins"
+                android:layout_below="@id/notif_title"/>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

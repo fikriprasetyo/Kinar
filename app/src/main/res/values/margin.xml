@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin">24dp</dimen>
+    <dimen name="satu">8dp</dimen>
+    <dimen name="dua">16dp</dimen>
+    <dimen name="tiga">24dp</dimen>
+    <dimen name="empat">32dp</dimen>
+    <dimen name="lima">40dp</dimen>
+    <dimen name="enam">48dp</dimen>
+    <dimen name="tujuh">56dp</dimen>
+    <dimen name="delapan">64dp</dimen>
+    <dimen name="sembilan">72dp</dimen>
+    <dimen name="sepuluh">80dp</dimen>
+</resources>

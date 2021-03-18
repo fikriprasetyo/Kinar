@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/margin">
+    <ImageView
+        android:id="@+id/slider_image"
+        android:layout_width="0dp"
+        android:layout_height="240dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.18"
+        tools:srcCompat="@tools:sample/avatars"
+        tools:ignore="ContentDescription" />
+    <TextView
+        android:id="@+id/slider_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/empat"
+        android:fontFamily="@font/poppins_bold"
+        android:text=""
+        android:textColor="@color/black"
+        android:lineSpacingMultiplier="0.7"
+        android:textSize="@dimen/three"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/slider_image" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/slider_title">
+
+        <TextView
+            android:id="@+id/slider_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dua"
+            android:letterSpacing="0.04"
+            android:fontFamily="@font/poppins"
+            android:textColor="@color/black"
+            android:text="@string/body_onboarding1"
+            android:textSize="@dimen/oneHalfHalf"
+            tools:ignore="UnusedAttribute" />
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

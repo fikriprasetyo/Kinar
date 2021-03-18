@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.MainActivity"
+    android:id="@+id/container"
+    android:background="@color/white">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <com.luseen.spacenavigation.SpaceNavigationView
+        android:id="@+id/bottom_navbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:elevation="@dimen/satu"
+        app:active_item_color="@color/primary"
+        app:centre_button_color="@color/primary"
+        app:centre_button_icon="@drawable/ic_add"
+        app:inactive_centre_button_icon_color="@color/white"
+        app:inactive_item_color="#95959F"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/ekinerja_toolbar"
+        app:space_background_color="@color/white"
+        tools:ignore="UnusedAttribute">
+    </com.luseen.spacenavigation.SpaceNavigationView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

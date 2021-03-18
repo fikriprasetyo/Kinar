@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/tujuh"
+        android:padding="@dimen/margin">
+        <ImageView
+            android:id="@+id/esTpp_image"
+            android:layout_width="match_parent"
+            android:layout_height="224dp"
+            android:src="@drawable/vector_on_developing"
+            android:contentDescription="@null" />
+        <TextView
+            android:id="@+id/esTpp_title1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/esTpp_image"
+            android:layout_marginTop="@dimen/tiga"
+            android:fontFamily="@font/poppins_bold"
+            android:text="@string/title_es_layout_tpp"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/three" />
+        <TextView
+            android:id="@+id/esTpp_title2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/esTpp_title1"
+            android:textAlignment="center"
+            android:fontFamily="@font/poppins_bold"
+            android:text="@string/titlestrong_es_layout_tpp"
+            android:textColor="@color/orange"
+            android:textSize="@dimen/three" />
+        <TextView
+            android:id="@+id/esTpp_descp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/esTpp_title2"
+            android:fontFamily="@font/poppins"
+            android:layout_marginTop="@dimen/dua"
+            android:textAlignment="center"
+            android:text="@string/desc_es_layout"
+            android:textColor="@color/black"
+            android:textSize="@dimen/oneHalfHalf" />
+        <ImageView
+            android:id="@+id/esTpp_arrow"
+            android:layout_width="match_parent"
+            android:layout_height="104dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/dua"
+            android:layout_below="@id/esTpp_descp"
+            android:src="@drawable/arrow"
+            android:contentDescription="@null" />
+    </RelativeLayout>
+</FrameLayout>
